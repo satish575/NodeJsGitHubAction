@@ -41,6 +41,7 @@ jobs:
           npm test
       if: github.event_name = 'push'
         run: |
+          npm install
           node index.js
          
 
