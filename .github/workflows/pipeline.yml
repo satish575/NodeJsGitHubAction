@@ -35,8 +35,12 @@ jobs:
       
       # Runs only of PR is generated
       - name: PR actions
+      if: github.event_name = 'pull_request'
         run: |
           npm install
           npm test
-          npm start
-          
+      if: github.event_name = 'push'
+        run: |
+          node index.js
+         
+
