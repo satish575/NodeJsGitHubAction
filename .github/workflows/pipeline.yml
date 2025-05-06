@@ -31,7 +31,7 @@ jobs:
           sudo apt install nginx
           sudo systemctl start nginx
           npm install
-          npm install -g pm2
+          sudo npm install -g pm2
           pm2 start index.js
 
          
