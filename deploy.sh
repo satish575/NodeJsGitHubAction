@@ -1,4 +1,5 @@
 #!/bin/bash
+git clone https://github.com/satish575/NodeJsGitHubAction.git
 cd NodeJsGitHubAction
 sudo apt install nginx
 sudo tee /etc/nginx/sites-available/node-app < nginxconf
