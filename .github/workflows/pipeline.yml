@@ -28,7 +28,6 @@ jobs:
       - name: Run node script on push
         if: github.event_name == 'push'
         run: |
-          scp -i ${{ secrets.SSH_KEY }} satish@192.168.1.71:/home/satish/
           ssh -i ${{ secrets.SSH_KEY }} satish@192.168.1.71 "bash -s" < deploy.sh
          
 
